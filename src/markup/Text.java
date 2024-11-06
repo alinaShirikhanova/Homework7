@@ -7,7 +7,8 @@ public class Text implements MarkDown {
         this.text = text;
     }
 
-    public void toMarkDown(StringBuilder sb){
+    @Override
+    public void toMarkdown(StringBuilder sb) {
         sb.append(text);
     }
 }
