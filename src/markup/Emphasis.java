@@ -12,4 +12,8 @@ public class Emphasis extends MarkDownElement {
     protected String getMarkdownSymbol() {
         return "*";
     }
+    @Override
+    protected String[] getTypst() {
+        return new String[]{"#emph[", "]"};
+    }
 }

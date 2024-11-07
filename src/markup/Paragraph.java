@@ -11,4 +11,8 @@ public class Paragraph extends MarkDownElement {
     protected String getMarkdownSymbol() {
         return "";
     }
+    @Override
+    protected String[] getTypst() {
+        return new String[]{"", ""};
+    }
 }

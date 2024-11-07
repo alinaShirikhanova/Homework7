@@ -12,4 +12,8 @@ public class Strong extends MarkDownElement {
     protected String getMarkdownSymbol() {
         return "__";
     }
+    @Override
+    protected String[] getTypst() {
+        return new String[]{"#strong[", "]"};
+    }
 }

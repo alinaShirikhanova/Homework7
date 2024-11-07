@@ -18,7 +18,15 @@ public abstract class MarkDownElement implements MarkDown {
             element.toMarkdown(sb);
         }
         sb.append(getMarkdownSymbol());
+    } public void toTypst(StringBuilder sb) {
+        String[] typstWrapper = getTypst();
+        sb.append(typstWrapper[0]);
+        for (MarkDown element : elements) {
+            element.toTypst(sb);
+        }
+        sb.append(typstWrapper[1]);
     }
 
     protected abstract String getMarkdownSymbol();
+    protected abstract String[] getTypst();
 }
