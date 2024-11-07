@@ -2,7 +2,8 @@ package markup;
 
 public class Text implements MarkDown {
     private String text;
-// Конструктор
+
+
     public Text(String text) {
         this.text = text;
     }
@@ -11,6 +12,7 @@ public class Text implements MarkDown {
     public void toMarkdown(StringBuilder sb) {
         sb.append(text);
     }
+
     @Override
     public void toTypst(StringBuilder sb) {
         sb.append(text);
