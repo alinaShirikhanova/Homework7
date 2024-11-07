@@ -2,17 +2,23 @@ package markup;
 
 import java.util.List;
 
-public class MarkDownElement implements MarkDown {
-    List<MarkDown> elements;
+public abstract class MarkDownElement implements MarkDown {
+    protected final List<MarkDown> elements;
 
-    public MarkDownElement(List<MarkDown> elements) {
+
+    protected MarkDownElement(List<MarkDown> elements) {
         this.elements = elements;
     }
 
+
     @Override
     public void toMarkdown(StringBuilder sb) {
-        for (MarkDown element : elements){
+        sb.append(getMarkdownSymbol());
+        for (MarkDown element : elements) {
             element.toMarkdown(sb);
         }
+        sb.append(getMarkdownSymbol());
     }
+
+    protected abstract String getMarkdownSymbol();
 }

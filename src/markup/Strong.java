@@ -1,5 +1,6 @@
 package markup;
 
+
 import java.util.List;
 
 public class Strong extends MarkDownElement {
@@ -8,9 +9,7 @@ public class Strong extends MarkDownElement {
     }
 
     @Override
-    public void toMarkdown(StringBuilder sb) {
-        sb.append("__");
-        super.toMarkdown(sb);
-        sb.append("__");
+    protected String getMarkdownSymbol() {
+        return "__";
     }
 }

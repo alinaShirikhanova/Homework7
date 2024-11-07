@@ -6,4 +6,9 @@ public class Paragraph extends MarkDownElement {
     public Paragraph(List<MarkDown> elements) {
         super(elements);
     }
+
+    @Override
+    protected String getMarkdownSymbol() {
+        return "";
+    }
 }

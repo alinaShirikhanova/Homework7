@@ -7,9 +7,8 @@ public class Strikeout extends MarkDownElement {
         super(elements);
     }
 
-    public void toMarkdown(StringBuilder sb){
-        sb.append("~");
-        super.toMarkdown(sb);
-        sb.append("~");
+    @Override
+    protected String getMarkdownSymbol() {
+        return "~";
     }
 }
